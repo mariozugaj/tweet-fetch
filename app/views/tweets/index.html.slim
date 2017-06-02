@@ -1,0 +1,8 @@
+.container
+  .row
+    .col.s12
+      h1 Search tweets by username
+      = form_tag tweets_path, method: :get, remote: true do
+        = label_tag 'Twitter username'
+        = text_field_tag :handle, '', required: true
+      .tweets-handler
