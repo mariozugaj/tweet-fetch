@@ -1,4 +1,7 @@
 Rails.application.routes.draw do
-  root 'tweets#index'
-  get '/tweets', to: 'tweets#index', as: :tweets
+  root to: 'tweets#index'
+
+  resource :tweets, only: [:index] do
+    get :pagination
+  end
 end

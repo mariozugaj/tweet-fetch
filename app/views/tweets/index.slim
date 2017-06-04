@@ -1,0 +1,15 @@
+.container
+  .row
+    .col.s12
+      h1 Handle tweets
+      .col.s12
+        = render 'form'
+      - if @tweets.any?
+        ul.tweets.col.s12.collection
+          = render partial: 'tweets/tweet', collection: @tweets
+      - else
+        .ff
+          h4 Sorry, no such handle.
+      .pagination[data-pagination-endpoint=@endpoint data-pagination-pages=@page_amount]
+        .progress
+          .indeterminate

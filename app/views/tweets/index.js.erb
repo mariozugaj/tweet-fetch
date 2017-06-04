@@ -1,1 +1,2 @@
-$('.tweets-handler').html('<%= j render("tweets/tweet") %>').fadeIn('slow');
+$('.tweets').html("<%= j render partial: 'tweets/tweet', layout: false, collection: @tweets %>").fadeIn('slow');
+$('.pagination').setAttribute("data-pagination-pages", '<%= @page_amount %>');
