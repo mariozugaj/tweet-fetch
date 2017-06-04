@@ -3,14 +3,13 @@
     .col.s12
       h1 Search tweets by username
       = form_tag tweets_path, method: :get, remote: true do
-        .input-field.col.s12.l8.m8
+        .input-field.col.s8.l10.m10
           i.material-icons.prefix
             | account_circle
           = text_field_tag :handle, '', class: 'validate'
           label[for="handle"]
             | Twitter handle
         button.btn.waves-effect.waves-light.btn-large[type="submit" name="action"]
-          | Search
-          i.material-icons.right
+          i.material-icons
             | search
       .tweets-handler.col.s12
