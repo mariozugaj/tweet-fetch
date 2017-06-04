@@ -19,7 +19,7 @@ class TwitterClient
   end
 
   def latest_tweets(handle)
-    client.user_timeline(handle)
+    client.user_timeline(handle, count: 200)
   rescue => e
     Rails.logger.error { "#{e.message}" }
     nil
