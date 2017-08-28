@@ -12,7 +12,6 @@ class TweetsController < ApplicationController
     @tweets = Kaminari.paginate_array(TwitterClient.new
                                                    .latest_tweets(params[:handle]))
                       .page(params[:page])
-    p params[:handle]
     render partial: 'tweets/tweet', layout: false, collection: @tweets
   end
 end
@@ -33,7 +32,7 @@ class TwitterClient
   def latest_tweets(handle)
     client.user_timeline(handle, count: 200)
   rescue => e
-    Rails.logger.error { e.message.to_s }
+    Rails.logger.error { "#{e.message}" }
     []
   end
 end
