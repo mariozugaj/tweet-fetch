@@ -1,24 +1,18 @@
-# README
+# Tweetfetch
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Tweetfetch is a tweet fetching application developed to learn working with third party APIs in Ruby on Rails.
 
-Things you may want to cover:
+### Features
 
-* Ruby version
+* Enter desired handle and fetch its tweets
+* 200 most recent tweets fetched (API rate limit)
+* Endless scroll pagination
 
-* System dependencies
+### Technical notes
 
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+* Backend written using Ruby on Rails
+* Styled usind Materialize CSS framework
+* Frontend interactions written in Javascript
+* Tweet fetching done using 'twitter' gem
+* Used Slim markup language
+* Used Figaro to set ENV variables
