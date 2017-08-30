@@ -9,7 +9,7 @@
           = render partial: 'tweets/tweet', collection: @tweets
       - else
         .ff
-          h4 Sorry, no such handle.
+          h4 Sorry, no such handle or no tweets.
       .pagination[data-pagination-endpoint=@endpoint data-pagination-pages=@page_amount]
         .progress
           .indeterminate

@@ -1,5 +1,4 @@
 class TweetsController < ApplicationController
-
   def index
     @tweets = Kaminari.paginate_array(TwitterClient.new
                                                    .latest_tweets(params[:handle]))
